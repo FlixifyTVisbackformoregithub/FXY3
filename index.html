@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Streaming Website</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #121212;
+            color: #fff;
+        }
+        .header {
+            background-color: #FFA500;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .header .logo img {
+            width: 100px;
+            height: auto;
+        }
+        .header .profile-icon img {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+        }
+        .main-image {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+        }
+        .main-image img {
+            max-width: 100%;
+            height: auto;
+        }
+        .content {
+            padding: 20px;
+        }
+        .movies {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .item {
+            width: calc(16.66% - 10px);
+            background-color: #333;
+            padding: 10px;
+            text-align: center;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .item img {
+            width: 100%;
+            height: auto;
+        }
+        .item:hover {
+            transform: scale(1.002);
+            box-shadow: 0 0 20px #FFA500;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="logo">
+            <img src="https://i.ibb.co/BVB0RbH/Untitled-design-10.png" alt="Logo">
+        </div>
+        <div class="profile-icon">
+            <img src="https://static-00.iconduck.com/assets.00/profile-circle-icon-512x512-zxne30hp.png" alt="Profile">
+        </div>
+    </div>
+    <div class="main-image">
+        <img src="https://i.ibb.co/DMKrGtd/FLIXIFY-4.png" alt="Main Image">
+    </div>
+    <div class="content">
+        <div class="movies">
+            <div class="item" onclick="playMovie('https://drive.google.com/file/d/1rY-7y04-XJZZ3dw8LJ7UxfntM3OTi6qe/preview')">
+                <img src="https://monkeyarmreviews.com/wp-content/uploads/2015/06/webbanner_insideout1-940x300.jpg" alt="Movie 1">
+                <p>Inside Out</p>
+            </div>
+
+            <div class="item" onclick="playMovie('movie2.mp4')">
+                <img src="movie2.jpg" alt="Movie 2">
+                <p>Movie 2</p>
+            </div>
+            <!-- Add more movie items as needed -->
+        </div>
+    </div>
+
+    <script>
+        function playMovie(url) {
+            window.location.href = url;
+            document.documentElement.requestFullscreen();
+        }
+    </script>
+</body>
+</html>
